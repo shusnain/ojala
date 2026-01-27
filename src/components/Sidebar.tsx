@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Home, FileText } from "lucide-react";
 
 const navigation = [
-  { name: "Home", href: "/", icon: Home },
+  { name: "Home", href: "/home", icon: Home },
   { name: "Invoices", href: "/invoices", icon: FileText },
 ];
 
@@ -17,7 +17,7 @@ export function Sidebar() {
       {/* Logo */}
       <div className="flex h-14 items-center px-4 border-b border-gray-200 dark:border-gray-800">
         <span className="text-lg font-semibold text-gray-900 dark:text-white">
-          Noor
+          Ojala
         </span>
       </div>
 
@@ -26,10 +26,8 @@ export function Sidebar() {
         <ul className="space-y-1">
           {navigation.map((item) => {
             const isActive =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname === item.href ||
-                  pathname.startsWith(item.href + "/");
+              pathname === item.href ||
+              pathname.startsWith(item.href + "/");
             return (
               <li key={item.name}>
                 <Link

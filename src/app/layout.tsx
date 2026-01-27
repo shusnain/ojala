@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "@/components/Sidebar";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -14,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Noor",
+  title: "Ojala",
   description: "Banking for startups",
 };
 
@@ -28,12 +27,7 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} ${geistMono.variable} antialiased root`}
       >
-        <div className="flex h-screen">
-          <Sidebar />
-          <main className="flex-1 overflow-auto bg-gray-50 dark:bg-gray-900">
-            {children}
-          </main>
-        </div>
+        {children}
       </body>
     </html>
   );

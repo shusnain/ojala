@@ -96,7 +96,7 @@ export default function InvoicesPage() {
           <thead>
             <tr className="border-b border-gray-200 dark:border-gray-800">
               <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                Invoice
+                Date
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
                 Vendor
@@ -107,9 +107,6 @@ export default function InvoicesPage() {
               <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
                 Status
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                Date
-              </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200 dark:divide-gray-800">
@@ -118,19 +115,14 @@ export default function InvoicesPage() {
                 key={invoice.id}
                 className="cursor-pointer transition-colors hover:bg-gray-50 dark:hover:bg-gray-900"
               >
-                <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-white">
                   <Link href={`/invoices/${invoice.id}`} className="block">
-                    {invoice.id}
+                    {formatDate(invoice.date)}
                   </Link>
                 </td>
-                <td className="whitespace-nowrap px-6 py-4">
+                <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
                   <Link href={`/invoices/${invoice.id}`} className="block">
-                    <div className="text-sm font-medium text-gray-900 dark:text-white">
-                      {invoice.vendor}
-                    </div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400">
-                      {invoice.email}
-                    </div>
+                    {invoice.vendor}
                   </Link>
                 </td>
                 <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-white">
@@ -145,11 +137,6 @@ export default function InvoicesPage() {
                     >
                       {invoice.status}
                     </span>
-                  </Link>
-                </td>
-                <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">
-                  <Link href={`/invoices/${invoice.id}`} className="block">
-                    {formatDate(invoice.date)}
                   </Link>
                 </td>
               </tr>
