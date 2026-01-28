@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fafaf9;
   --foreground: #171717;
   --color-heading: #282c20;
   --color-heading-hover: #3a3f32;
@@ -14,13 +14,6 @@
   --color-heading-hover: var(--color-heading-hover);
   --font-sans: var(--font-outfit);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
