@@ -3,6 +3,7 @@ import { ArrowRight, ShieldCheck } from "lucide-react";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { Practices } from "@/components/landing/Practices";
 
+
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-stone-50 font-(family-name:--font-outfit)">
