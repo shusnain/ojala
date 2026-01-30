@@ -1,24 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafaf9;
-  --foreground: #171717;
+  --color-bg: #f2f0ec;
+  --color-bg-alt: #e8e6e2;
+  --color-bg-dark: #2d3128;
+  --color-text: #171717;
   --color-heading: #282c20;
-  --color-heading-hover: #3a3f32;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-bg: var(--color-bg);
+  --color-bg-alt: var(--color-bg-alt);
+  --color-bg-dark: var(--color-bg-dark);
+  --color-text: var(--color-text);
   --color-heading: var(--color-heading);
-  --color-heading-hover: var(--color-heading-hover);
   --font-sans: var(--font-outfit);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-bg);
+  color: var(--color-text);
   font-family: var(--font-outfit), sans-serif;
   position: relative; /* Required for Base UI backdrop positioning on iOS Safari */
 }

@@ -52,7 +52,7 @@ export function HowItWorks() {
               <h3 className="mt-4 text-lg font-medium text-heading font-(family-name:--font-newsreader)">
                 {step.title}
               </h3>
-              <p className="mt-2 leading-relaxed text-stone-600">
+              <p className="mt-2 text-sm leading-relaxed text-stone-600">
                 {step.description}
               </p>
               <p className="mt-3 text-sm italic text-stone-500">

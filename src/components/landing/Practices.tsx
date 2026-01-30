@@ -27,7 +27,7 @@ const practices = [
 
 export function Practices() {
   return (
-    <section className="border-t border-stone-200 bg-stone-100">
+    <section className="border-t border-stone-200 bg-bg-alt">
       <div className="mx-auto max-w-4xl px-6 py-20">
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-stone-400">
@@ -41,7 +41,7 @@ export function Practices() {
           {practices.map((practice) => (
             <div
               key={practice.name}
-              className="rounded-xl border border-stone-200 bg-stone-50 p-6"
+              className="rounded-xl border border-stone-200 bg-bg p-6"
             >
               <h3 className="font-medium text-heading font-(family-name:--font-newsreader)">
                 {practice.name}
