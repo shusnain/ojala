@@ -15,7 +15,7 @@ export default function LandingPage() {
           </span>
           <Link
             href="/home"
-            className="rounded-lg bg-heading px-4 py-2 text-sm font-medium tracking-wide text-stone-50 transition-colors hover:bg-heading/85"
+            className="rounded-none bg-heading px-4 py-2 text-sm font-medium tracking-wide text-stone-50 transition-colors hover:bg-heading/85"
           >
             Get Started
           </Link>
@@ -41,7 +41,7 @@ export default function LandingPage() {
             <div className="mt-8">
               <Link
                 href="/home"
-                className="inline-flex items-center gap-2 rounded-lg border border-heading px-6 py-3 text-sm font-medium text-heading transition-colors hover:bg-heading hover:text-stone-50"
+                className="inline-flex items-center gap-2 rounded-none border border-heading px-8 py-4 text-base font-medium text-heading transition-colors hover:bg-heading hover:text-stone-50"
               >
                 Get Started
                 <ArrowRight className="h-4 w-4" />
@@ -131,7 +131,7 @@ export default function LandingPage() {
           </p>
           <Link
             href="/home"
-            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-heading px-6 py-3 text-sm font-medium text-stone-50 transition-colors hover:bg-heading/85"
+            className="mt-8 inline-flex items-center gap-2 rounded-none bg-heading px-6 py-3 text-sm font-medium text-stone-50 transition-colors hover:bg-heading/85"
           >
             Get Started
             <ArrowRight className="h-4 w-4" />
