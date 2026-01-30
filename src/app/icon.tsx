@@ -22,10 +22,10 @@ export default async function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#ffffff",
+          backgroundColor: "#f2f0ec",
           borderRadius: 6,
           fontFamily: "Outfit",
-          fontSize: 22,
+          fontSize: 28,
           fontWeight: 600,
           color: "#282c20",
         }}
