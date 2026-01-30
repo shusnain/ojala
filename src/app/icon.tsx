@@ -28,6 +28,9 @@ export default async function Icon() {
           fontSize: 28,
           fontWeight: 600,
           color: "#282c20",
+          lineHeight: 1,
+          textAlign: "center",
+          paddingLeft: 1,
         }}
       >
         O
