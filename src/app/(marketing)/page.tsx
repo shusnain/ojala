@@ -34,6 +34,7 @@ export default function LandingPage() {
             <h1 className="mt-3 text-3xl font-medium leading-tight tracking-tight text-heading font-(family-name:--font-newsreader) sm:text-4xl lg:text-5xl">
               Your vendors are charging you more than your contract
             </h1>
+
             <p className="mt-4 max-w-md text-lg leading-relaxed text-stone-600">
               Ojala helps healthcare providers stop overpaying vendors
               by automatically auditing every supply invoice against your
@@ -81,6 +82,36 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* Invoice card – mobile only */}
+      <div className="flex justify-center bg-bg-dark py-12 lg:hidden">
+        <div className="-rotate-3 bg-bg px-8 py-8 shadow-2xl font-mono text-xs w-80">
+          <div className="flex items-center justify-between">
+            <span className="font-semibold text-heading">INVOICE #4847</span>
+          </div>
+          <div className="mt-5 border-t border-dashed border-stone-300 pt-5">
+            <div className="flex justify-between">
+              <span className="text-stone-500">Vendor</span>
+              <span className="text-heading">Medline Industries</span>
+            </div>
+            <div className="mt-3 flex justify-between">
+              <span className="text-stone-500">Invoice Total</span>
+              <span className="text-heading">$8,432.00</span>
+            </div>
+            <div className="mt-3 flex justify-between">
+              <span className="text-stone-500">Contract Price</span>
+              <span className="text-heading">$7,185.00</span>
+            </div>
+            <div className="-mx-2 mt-4 flex justify-between bg-red-700 px-2 py-1.5">
+              <span className="font-medium text-white">Overcharge</span>
+              <span className="font-semibold text-white">+$1,247.00</span>
+            </div>
+          </div>
+          <div className="mt-5 text-center text-xs font-semibold tracking-widest text-stone-400">
+            DISPUTE DRAFTED
+          </div>
+        </div>
+      </div>
 
       {/* The problem */}
       <section className="border-t border-stone-200 bg-bg-alt">
