@@ -17,31 +17,27 @@ export default function LandingPage() {
             href="/home"
             className="rounded-lg bg-heading px-4 py-2 text-sm font-medium text-stone-50 transition-colors hover:bg-heading-hover"
           >
-            Talk to Founder
+            Talk to Founders
           </Link>
         </nav>
       </div>
 
       {/* Hero */}
-      <section className="mx-auto max-w-3xl px-6 pt-24 pb-20 text-center">
-        <p className="text-sm font-medium uppercase tracking-widest text-stone-400">
-          AI-powered invoice recovery
-        </p>
-        <h1 className="mt-4 text-5xl font-medium leading-tight tracking-tight text-heading font-(family-name:--font-newsreader) sm:text-6xl">
-          Recover <em>thousands</em> in
-          <br />
-          invoice errors in seconds
+      <section className="mx-auto max-w-4xl px-6 pt-24 pb-20 text-center">
+        <h1 className="mx-auto max-w-3xl text-4xl font-medium leading-tight tracking-tight text-heading font-(family-name:--font-newsreader) sm:text-5xl md:text-6xl">
+          Your vendors are charging you more than your contract
         </h1>
-        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-stone-600">
-          AI that catches pricing discrepancies, drafts disputes, and recovers
-          your money. No extra headcount. No manual work.
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
+          Ojala helps healthcare providers stop overpaying vendors
+          by automatically auditing every supply invoice against your
+          contracted rates.
         </p>
         <div className="mt-10 flex items-center justify-center gap-4">
           <Link
             href="/home"
             className="inline-flex items-center gap-2 rounded-lg bg-heading px-6 py-3 text-sm font-medium text-stone-50 transition-colors hover:bg-heading-hover"
           >
-            Talk to Founder
+            Talk to Founders
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -99,7 +95,7 @@ export default function LandingPage() {
             href="/home"
             className="mt-8 inline-flex items-center gap-2 rounded-lg bg-heading px-6 py-3 text-sm font-medium text-stone-50 transition-colors hover:bg-heading-hover"
           >
-            Talk to Founder
+            Talk to Founders
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
