@@ -13,10 +13,10 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="flex h-screen w-60 flex-col border-r border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950">
+    <aside className="flex h-screen w-60 flex-col border-r border-stone-200 bg-white">
       {/* Logo */}
-      <div className="flex h-14 items-center px-4 border-b border-gray-200 dark:border-gray-800">
-        <span className="text-lg font-semibold text-gray-900 dark:text-white">
+      <div className="flex h-14 items-center px-4 border-b border-stone-200">
+        <span className="text-lg font-semibold text-heading">
           Ojala
         </span>
       </div>
@@ -34,8 +34,8 @@ export function Sidebar() {
                   href={item.href}
                   className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
                     isActive
-                      ? "bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white"
-                      : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-900 dark:hover:text-white"
+                      ? "bg-stone-100 text-heading"
+                      : "text-stone-600 hover:bg-stone-50 hover:text-heading"
                   }`}
                 >
                   <item.icon className="h-5 w-5" />

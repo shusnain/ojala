@@ -82,13 +82,13 @@ const invoices = [
 function getStatusStyles(status: string) {
   switch (status) {
     case "paid":
-      return "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400";
+      return "bg-green-100 text-green-700";
     case "pending":
-      return "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400";
+      return "bg-yellow-100 text-yellow-700";
     case "overdue":
-      return "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400";
+      return "bg-red-100 text-red-700";
     default:
-      return "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-400";
+      return "bg-stone-100 text-stone-700";
   }
 }
 
@@ -119,15 +119,15 @@ export default async function InvoiceDetailsPage({
     return (
       <div className="p-8">
         <div className="text-center">
-          <h1 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          <h1 className="text-2xl font-semibold text-heading">
             Invoice not found
           </h1>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
+          <p className="mt-2 text-stone-600">
             The invoice you&apos;re looking for doesn&apos;t exist.
           </p>
           <Link
             href="/invoices"
-            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-gray-600 dark:text-white dark:hover:text-gray-300"
+            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-heading hover:text-stone-600"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Invoices
@@ -149,13 +149,13 @@ export default async function InvoiceDetailsPage({
         <div className="flex items-center gap-4">
           <Link
             href="/invoices"
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 text-gray-600 transition-colors hover:bg-gray-50 hover:text-gray-900 dark:border-gray-800 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-stone-200 text-stone-600 transition-colors hover:bg-stone-50 hover:text-heading"
           >
             <ArrowLeft className="h-4 w-4" />
           </Link>
           <div>
             <div className="flex items-center gap-3">
-              <h1 className="text-2xl font-semibold text-gray-900 dark:text-white">
+              <h1 className="text-2xl font-semibold text-heading">
                 {invoice.id}
               </h1>
               <span
@@ -164,23 +164,23 @@ export default async function InvoiceDetailsPage({
                 {invoice.status}
               </span>
             </div>
-            <p className="mt-1 text-gray-600 dark:text-gray-400">
+            <p className="mt-1 text-stone-600">
               Received on {formatDate(invoice.date)}
             </p>
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <button className="flex items-center gap-2 rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 dark:border-gray-800 dark:text-gray-300 dark:hover:bg-gray-800">
+          <button className="flex items-center gap-2 rounded-lg border border-stone-200 px-4 py-2 text-sm font-medium text-stone-700 transition-colors hover:bg-stone-50">
             <Download className="h-4 w-4" />
             Download
           </button>
           {invoice.status !== "paid" && (
-            <button className="flex items-center gap-2 rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100">
+            <button className="flex items-center gap-2 rounded-lg bg-heading px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-heading/90">
               <CreditCard className="h-4 w-4" />
               Pay Now
             </button>
           )}
-          <button className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 text-gray-600 transition-colors hover:bg-gray-50 hover:text-gray-900 dark:border-gray-800 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white">
+          <button className="flex h-9 w-9 items-center justify-center rounded-lg border border-stone-200 text-stone-600 transition-colors hover:bg-stone-50 hover:text-heading">
             <MoreHorizontal className="h-4 w-4" />
           </button>
         </div>
@@ -189,19 +189,19 @@ export default async function InvoiceDetailsPage({
       <div className="mt-8 grid gap-8 lg:grid-cols-3">
         {/* Invoice Details */}
         <div className="lg:col-span-2">
-          <div className="rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950">
+          <div className="rounded-xl border border-stone-200 bg-white">
             {/* Vendor Info */}
-            <div className="border-b border-gray-200 p-6 dark:border-gray-800">
-              <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400">
+            <div className="border-b border-stone-200 p-6">
+              <h2 className="text-sm font-medium text-stone-500">
                 From Vendor
               </h2>
-              <p className="mt-2 text-lg font-medium text-gray-900 dark:text-white">
+              <p className="mt-2 text-lg font-medium text-heading">
                 {invoice.vendor}
               </p>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              <p className="mt-1 text-sm text-stone-600">
                 {invoice.email}
               </p>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              <p className="mt-1 text-sm text-stone-600">
                 {invoice.address}
               </p>
             </div>
@@ -210,34 +210,34 @@ export default async function InvoiceDetailsPage({
             <div className="p-6">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gray-200 dark:border-gray-800">
-                    <th className="pb-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                  <tr className="border-b border-stone-200">
+                    <th className="pb-3 text-left text-xs font-medium uppercase tracking-wider text-stone-500">
                       Description
                     </th>
-                    <th className="pb-3 text-right text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                    <th className="pb-3 text-right text-xs font-medium uppercase tracking-wider text-stone-500">
                       Qty
                     </th>
-                    <th className="pb-3 text-right text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                    <th className="pb-3 text-right text-xs font-medium uppercase tracking-wider text-stone-500">
                       Rate
                     </th>
-                    <th className="pb-3 text-right text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                    <th className="pb-3 text-right text-xs font-medium uppercase tracking-wider text-stone-500">
                       Amount
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-200 dark:divide-gray-800">
+                <tbody className="divide-y divide-stone-200">
                   {invoice.items.map((item, index) => (
                     <tr key={index}>
-                      <td className="py-4 text-sm text-gray-900 dark:text-white">
+                      <td className="py-4 text-sm text-text">
                         {item.description}
                       </td>
-                      <td className="py-4 text-right text-sm text-gray-600 dark:text-gray-400">
+                      <td className="py-4 text-right text-sm text-stone-600">
                         {item.quantity}
                       </td>
-                      <td className="py-4 text-right text-sm text-gray-600 dark:text-gray-400">
+                      <td className="py-4 text-right text-sm text-stone-600">
                         {formatCurrency(item.rate)}
                       </td>
-                      <td className="py-4 text-right text-sm font-medium text-gray-900 dark:text-white">
+                      <td className="py-4 text-right text-sm font-medium text-text">
                         {formatCurrency(item.quantity * item.rate)}
                       </td>
                     </tr>
@@ -246,30 +246,30 @@ export default async function InvoiceDetailsPage({
               </table>
 
               {/* Totals */}
-              <div className="mt-6 border-t border-gray-200 pt-6 dark:border-gray-800">
+              <div className="mt-6 border-t border-stone-200 pt-6">
                 <div className="flex justify-end">
                   <div className="w-64 space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span className="text-gray-600 dark:text-gray-400">
+                      <span className="text-stone-600">
                         Subtotal
                       </span>
-                      <span className="text-gray-900 dark:text-white">
+                      <span className="text-text">
                         {formatCurrency(subtotal)}
                       </span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-gray-600 dark:text-gray-400">
+                      <span className="text-stone-600">
                         Tax (0%)
                       </span>
-                      <span className="text-gray-900 dark:text-white">
+                      <span className="text-text">
                         {formatCurrency(0)}
                       </span>
                     </div>
-                    <div className="flex justify-between border-t border-gray-200 pt-2 text-base font-medium dark:border-gray-800">
-                      <span className="text-gray-900 dark:text-white">
+                    <div className="flex justify-between border-t border-stone-200 pt-2 text-base font-medium">
+                      <span className="text-heading">
                         Total
                       </span>
-                      <span className="text-gray-900 dark:text-white">
+                      <span className="text-heading">
                         {formatCurrency(invoice.amount)}
                       </span>
                     </div>
@@ -283,34 +283,34 @@ export default async function InvoiceDetailsPage({
         {/* Sidebar */}
         <div className="space-y-6">
           {/* Payment Info */}
-          <div className="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-950">
-            <h2 className="text-sm font-medium text-gray-900 dark:text-white">
+          <div className="rounded-xl border border-stone-200 bg-white p-6">
+            <h2 className="text-sm font-medium text-heading">
               Payment Details
             </h2>
             <dl className="mt-4 space-y-3">
               <div className="flex justify-between">
-                <dt className="text-sm text-gray-600 dark:text-gray-400">
+                <dt className="text-sm text-stone-600">
                   Amount Due
                 </dt>
-                <dd className="text-sm font-medium text-gray-900 dark:text-white">
+                <dd className="text-sm font-medium text-text">
                   {invoice.status === "paid"
                     ? formatCurrency(0)
                     : formatCurrency(invoice.amount)}
                 </dd>
               </div>
               <div className="flex justify-between">
-                <dt className="text-sm text-gray-600 dark:text-gray-400">
+                <dt className="text-sm text-stone-600">
                   Due Date
                 </dt>
-                <dd className="text-sm font-medium text-gray-900 dark:text-white">
+                <dd className="text-sm font-medium text-text">
                   {formatDate(invoice.dueDate)}
                 </dd>
               </div>
               <div className="flex justify-between">
-                <dt className="text-sm text-gray-600 dark:text-gray-400">
+                <dt className="text-sm text-stone-600">
                   Invoice Date
                 </dt>
-                <dd className="text-sm font-medium text-gray-900 dark:text-white">
+                <dd className="text-sm font-medium text-text">
                   {formatDate(invoice.date)}
                 </dd>
               </div>
@@ -318,15 +318,15 @@ export default async function InvoiceDetailsPage({
           </div>
 
           {/* Vendor Info Card */}
-          <div className="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-950">
-            <h2 className="text-sm font-medium text-gray-900 dark:text-white">
+          <div className="rounded-xl border border-stone-200 bg-white p-6">
+            <h2 className="text-sm font-medium text-heading">
               Vendor
             </h2>
             <div className="mt-4">
-              <p className="text-sm font-medium text-gray-900 dark:text-white">
+              <p className="text-sm font-medium text-text">
                 {invoice.vendor}
               </p>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              <p className="mt-1 text-sm text-stone-600">
                 {invoice.email}
               </p>
             </div>

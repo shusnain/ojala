@@ -48,13 +48,13 @@ const invoices = [
 function getStatusStyles(status: string) {
   switch (status) {
     case "paid":
-      return "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400";
+      return "bg-green-100 text-green-700";
     case "pending":
-      return "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400";
+      return "bg-yellow-100 text-yellow-700";
     case "overdue":
-      return "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400";
+      return "bg-red-100 text-red-700";
     default:
-      return "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-400";
+      return "bg-stone-100 text-stone-700";
   }
 }
 
@@ -78,54 +78,54 @@ export default function InvoicesPage() {
     <div className="p-8">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          <h1 className="text-2xl font-semibold text-heading">
             Invoices
           </h1>
-          <p className="mt-1 text-gray-600 dark:text-gray-400">
+          <p className="mt-1 text-stone-600">
             Manage and track vendor invoices
           </p>
         </div>
-        <button className="flex items-center gap-2 rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100">
+        <button className="flex items-center gap-2 rounded-lg bg-heading px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-heading/90">
           <Upload className="h-4 w-4" />
           Upload Invoice
         </button>
       </div>
 
-      <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950">
+      <div className="mt-8 overflow-hidden rounded-xl border border-stone-200 bg-white">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-gray-200 dark:border-gray-800">
-              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
+            <tr className="border-b border-stone-200">
+              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-stone-500">
                 Date
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
+              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-stone-500">
                 Vendor
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
+              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-stone-500">
                 Amount
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
+              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-stone-500">
                 Status
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200 dark:divide-gray-800">
+          <tbody className="divide-y divide-stone-200">
             {invoices.map((invoice) => (
               <tr
                 key={invoice.id}
-                className="cursor-pointer transition-colors hover:bg-gray-50 dark:hover:bg-gray-900"
+                className="cursor-pointer transition-colors hover:bg-stone-50"
               >
-                <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-white">
+                <td className="whitespace-nowrap px-6 py-4 text-sm text-text">
                   <Link href={`/invoices/${invoice.id}`} className="block">
                     {formatDate(invoice.date)}
                   </Link>
                 </td>
-                <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-text">
                   <Link href={`/invoices/${invoice.id}`} className="block">
                     {invoice.vendor}
                   </Link>
                 </td>
-                <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-900 dark:text-white">
+                <td className="whitespace-nowrap px-6 py-4 text-sm text-text">
                   <Link href={`/invoices/${invoice.id}`} className="block">
                     {formatCurrency(invoice.amount)}
                   </Link>
