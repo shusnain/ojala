@@ -2,12 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, FileText } from "lucide-react";
+import { Home } from "lucide-react";
 
-const navigation = [
-  { name: "Home", href: "/home", icon: Home },
-  { name: "Invoices", href: "/invoices", icon: FileText },
-];
+const navigation = [{ name: "Home", href: "/home", icon: Home }];
 
 export function Sidebar() {
   const pathname = usePathname();
