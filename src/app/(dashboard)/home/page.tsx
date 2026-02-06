@@ -1,3 +1,9 @@
+import { ChatAssistant } from "@/components/ChatAssistant";
+
 export default function Home() {
-  return <div className="p-8"></div>;
+  return (
+    <div className="h-full">
+      <ChatAssistant />
+    </div>
+  );
 }
