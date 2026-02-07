@@ -77,7 +77,7 @@ export function ChatInput({
 
   return (
     <div
-      className={`relative flex flex-col rounded-2xl border bg-white shadow-sm transition-colors focus-within:border-stone-300 focus-within:ring-2 focus-within:ring-stone-200 ${
+      className={`relative flex flex-col rounded-2xl border bg-white shadow-sm transition-colors ${
         isDragOver ? "border-blue-400 bg-blue-50" : "border-stone-200"
       }`}
       onDragOver={handleDragOver}
