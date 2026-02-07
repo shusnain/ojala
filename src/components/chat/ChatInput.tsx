@@ -92,7 +92,7 @@ export function ChatInput({
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
             className="overflow-hidden"
           >
             <motion.div layout className="flex flex-wrap gap-3 px-3 pt-3">
@@ -104,7 +104,7 @@ export function ChatInput({
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
-                    transition={{ duration: 0.15 }}
+                    transition={{ duration: 0.15, ease: "easeInOut" }}
                     className="group relative"
                   >
                     <button

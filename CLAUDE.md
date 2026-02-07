@@ -8,6 +8,7 @@ Healthcare AI assistant platform built with Next.js.
 - **Styling**: Tailwind CSS v4
 - **UI Components**: Base UI (`@base-ui-components/react`) - unstyled, accessible
 - **AI**: OpenAI SDK, Streamdown for markdown rendering
+- **Animations**: Framer Motion
 - **Icons**: Lucide React
 
 ## Project Structure
@@ -46,6 +47,14 @@ Import from `@base-ui-components/react/[component]`. Use Tailwind's `data-[attr]
 
 ### Design Tokens
 Use semantic color classes: `text-heading`, `bg-bg`, `text-text`. Defined in `globals.css`.
+
+### Animations
+Use Framer Motion for animations. Add animations tastefully to enhance UX:
+- Use `ease: "easeInOut"` for all transitions
+- Use `AnimatePresence` for enter/exit animations on conditional elements
+- Use `motion.div` with `layout` prop for smooth reflows when content changes
+- Keep durations short (0.15-0.2s) for snappy interactions
+- Avoid animating elements that remount frequently (use JSX variables instead of inline function components)
 
 ## Gotchas
 
