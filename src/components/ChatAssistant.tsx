@@ -156,7 +156,7 @@ export function ChatAssistant() {
               />
             </form>
             <p className="mt-3 text-center text-sm text-stone-400">
-              Attach images or PDFs to include them in your message
+              AI can make mistakes. Please verify important information.
             </p>
           </div>
         </div>
